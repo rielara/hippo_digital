@@ -1,27 +1,25 @@
 import "./App.css";
 import ContractForm from "./components/contractForm/ContractForm";
-import { useState } from "react";
-
-
-
+import { useEffect, useState } from "react";
+import CandidateList from "./components/candidateList/CandidateList";
 
 function App() {
-
-  const [contract, setContract] = useState([]);
+  const [contract, setContract] = useState({});
 
   const updateContract = (newContract) => {
-    setContract([...contract, newContract]);
-    console.log('this is the contract', contract)
-  }
+    setContract(newContract);
+  };
 
-  // this is working but you have to press the submit button twice to get the console log to work
-
+  useEffect(() => {
+    console.log("this is the contract", contract);
+  }, [contract]);
 
   return (
     <div className="App">
       <h1>THE CONTRACTORS</h1>
       <p>Welcome</p>
-      <ContractForm updateContract={updateContract}/>
+      <ContractForm updateContract={updateContract} />
+      <CandidateList contract={contract} />
     </div>
   );
 }
