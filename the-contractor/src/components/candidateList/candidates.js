@@ -15,36 +15,37 @@ export const candidates = [
     skills: ["Java", "JavaScript", "AWS"],
   },
   {
+    id: 4,
     name: "Emily Chen",
     skills: ["Java", "JavaScript", "Python"],
   },
   {
-    id: 4,
+    id: 5,
     name: "Alex Kim",
     skills: ["Java", "Python"],
   },
   {
-    id: 5,
+    id: 6,
     name: "Sophia Rodriguez",
     skills: ["JavaScript", "Python"],
   },
   {
-    id: 6,
+    id: 7,
     name: "David Park",
     skills: ["Java", "AWS"],
   },
   {
-    id: 7,
+    id: 8,
     name: "Mia Patel",
     skills: ["JavaScript", "AWS"],
   },
   {
-    id: 8,
+    id: 9,
     name: "Oliver Lee",
     skills: ["Java"],
   },
   {
-    id: 9,
+    id: 10,
     name: "Isabella Brown",
     skills: ["JavaScript"],
   },
