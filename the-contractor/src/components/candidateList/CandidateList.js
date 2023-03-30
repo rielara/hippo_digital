@@ -46,7 +46,7 @@ export default function CandidateList({ contract }) {
   }, [contract]);
 
   return (
-    <div>
+    <div className="candidate-list">
       <div>
         <h1>{contract.name}</h1>
         <p>{contract.description}</p>
@@ -59,9 +59,9 @@ export default function CandidateList({ contract }) {
       <div>
         {showCandidates.map((candidate) => {
           return (
-            <div key={candidate.id}>
+            <div key={candidate.id} className="candidate">
               <p>{candidate.name}</p>
-              <p>{candidate.matches}</p>
+              <p>{candidate.matches} Matches</p>
             </div>
           );
         })}
