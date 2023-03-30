@@ -1,4 +1,3 @@
-import "./App.css";
 import ContractForm from "./components/contractForm/ContractForm";
 import { useEffect, useState } from "react";
 import CandidateList from "./components/candidateList/CandidateList";
@@ -15,10 +14,15 @@ function App() {
   }, [contract]);
 
   return (
-    <div className="App">
-      <h1>THE CONTRACTORS</h1>
-      <p>Welcome</p>
-      <ContractForm updateContract={updateContract} />
+    <div className="app">
+      <div className="app-welcome">
+        <h1>THE CONTRACTORS</h1>
+        <p>
+          Welcome! Please enter your planned contract details to see the
+          candidates that best match your requirements.
+        </p>
+        <ContractForm updateContract={updateContract} />
+      </div>
       <CandidateList contract={contract} />
     </div>
   );

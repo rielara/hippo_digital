@@ -52,7 +52,6 @@ const ContractForm = ({ updateContract }) => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <p>Enter short description of your project.</p>
       <label htmlFor="description">Project Description</label>
       <input
         type="text"
@@ -63,16 +62,22 @@ const ContractForm = ({ updateContract }) => {
       <br />
       <label>Select skills you are looking for:</label>
       <br />
-      <input type="checkbox" value="Java" onChange={handleSkillChange} /> Java
-      <input
-        type="checkbox"
-        value="Javascript"
-        onChange={handleSkillChange}
-      />{" "}
-      Javascript
-      <input type="checkbox" value="Python" onChange={handleSkillChange} />{" "}
-      Python
-      <input type="checkbox" value="AWS" onChange={handleSkillChange} /> AWS
+      <div className="skills">
+        <input type="checkbox" value="Java" onChange={handleSkillChange} /> Java
+        <input
+          type="checkbox"
+          value="Javascript"
+          onChange={handleSkillChange}
+        />{" "}
+        Javascript
+        <input
+          type="checkbox"
+          value="Python"
+          onChange={handleSkillChange}
+        />{" "}
+        Python
+        <input type="checkbox" value="AWS" onChange={handleSkillChange} /> AWS
+      </div>
       <br />
       <button type="submit">Find me an ideal candidate</button>
     </form>
